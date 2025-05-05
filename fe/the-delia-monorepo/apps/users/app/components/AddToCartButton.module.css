@@ -1,0 +1,16 @@
+/* app/components/AddToCartButton.module.css */
+.addToCartButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .addToCartButton:hover {
+    color: #ff6200;
+  }

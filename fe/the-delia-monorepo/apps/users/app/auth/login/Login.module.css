@@ -1,0 +1,184 @@
+/* app/auth/login/Login.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url('/images/login-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.authBox {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 2px solid #ff6f61;
+  margin-bottom: 1.5rem;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #666;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.tab:hover {
+  color: #ff6f61;
+}
+
+.activeTab {
+  color: #ff6f61;
+  border-bottom: 2px solid #ff6f61;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup label {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.inputGroup label::before {
+  content: "* ";
+  color: #ff6f61;
+}
+
+.input {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus {
+  border-color: #ff6f61;
+}
+
+.forgotPassword {
+  font-size: 0.9rem;
+  color: #ff6f61;
+  text-align: right;
+  text-decoration: none;
+  margin-top: 0.5rem;
+}
+
+.forgotPassword:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: #e63946;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.submitButton {
+  padding: 0.75rem;
+  background: #2f3a44;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submitButton:hover {
+  background: #1f2a34;
+}
+
+.socialLogin {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.socialLogin p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.socialButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.socialButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.socialButton:hover {
+  background: #f5f5f5;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .authBox {
+    padding: 1.5rem;
+  }
+
+  .tabs {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .tab {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .submitButton,
+  .socialButton {
+    font-size: 0.9rem;
+  }
+}

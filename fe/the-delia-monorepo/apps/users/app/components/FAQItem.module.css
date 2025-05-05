@@ -1,0 +1,25 @@
+/* app/components/FAQItem.module.css */
+.faqItem {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 0.5rem 0;
+    cursor: pointer;
+  }
+  
+  .faqQuestion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #000;
+  }
+  
+  .faqQuestion i {
+    font-size: 0.8rem;
+    color: #666;
+  }
+  
+  .faqAnswer {
+    font-size: 0.9rem;
+    color: #666;
+    padding: 0.5rem 0;
+  }

@@ -1,0 +1,114 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  padding: 2rem 1rem;
+  background-color: #fdfdfd;
+  display: flex;
+  justify-content: center;
+}
+
+.centeredContainer {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #474747;
+}
+
+.imageWrapper {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ảnh tổng quát */
+.measurementImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+.measurementImage:hover {
+  transform: scale(1.02);
+}
+
+/* Các ảnh riêng biệt */
+.image1 {
+  width: 800px;
+}
+
+.image2 {
+  width: 850px;
+}
+
+.image3 {
+  width: 850px;
+}
+
+.image4 {
+  width: 850px;
+}
+
+.image5 {
+  width: 850px;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.measurementSection {
+  margin-top: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.4rem;
+    padding-left: 0.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .measurementImage,
+  .image1,
+  .image2,
+  .image3,
+  .image4,
+  .image5 {
+    width: 100% !important;
+  }
+}

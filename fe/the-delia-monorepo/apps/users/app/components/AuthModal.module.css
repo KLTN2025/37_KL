@@ -1,0 +1,329 @@
+/* app/components/AuthModal.module.css */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(5px);
+}
+
+.modal {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  width: 450px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 1.5rem;
+}
+
+.tab {
+  flex: 1;
+  padding: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.tab.activeTab {
+  color: #ff6f61;
+  border-bottom: 3px solid #ff6f61;
+}
+
+.tab:hover,
+.tab:focus {
+  color: #ff6f61;
+  outline: none;
+}
+
+.tab:focus {
+  box-shadow: 0 0 0 2px rgba(255, 111, 97, 0.3);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup label {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.input {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+  width: 100%;
+}
+
+.passwordInput {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.passwordInput .input {
+  padding-right: 40px;
+}
+
+.passwordToggle {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.passwordToggle:hover {
+  color: #ff6f61;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #ff6f61;
+  box-shadow: 0 0 8px rgba(255, 111, 97, 0.2);
+}
+
+.error {
+  color: #e63946;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.forgotPassword {
+  font-size: 0.85rem;
+  color: #666;
+  text-align: right;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.forgotPassword:hover,
+.forgotPassword:focus {
+  color: #ff6f61;
+  outline: none;
+}
+
+.submitButton {
+  padding: 0.75rem;
+  background: linear-gradient(90deg, #ff6f61, #e65b50);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.submitButton:hover {
+  background: linear-gradient(90deg, #e65b50, #ff6f61);
+  transform: translateY(-2px);
+}
+
+.submitButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 111, 97, 0.3);
+}
+
+.socialLogin {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.socialLogin p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.socialLogin p::before,
+.socialLogin p::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.socialLogin p::before {
+  left: 0;
+}
+
+.socialLogin p::after {
+  right: 0;
+}
+
+.socialButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.socialButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #000;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.socialButton svg {
+  font-size: 1.2rem;
+}
+
+.socialButton:hover {
+  background: #f5f5f5;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.closeButton:hover,
+.closeButton:focus {
+  color: #ff6f61;
+  outline: none;
+}
+
+.closeButton:focus {
+  box-shadow: 0 0 0 2px rgba(255, 111, 97, 0.3);
+}
+
+.successNotification {
+  background: #d4edda;
+  color: #155724;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.viewCartButton {
+  background: #ff6f61;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.viewCartButton:hover,
+.viewCartButton:focus {
+  background: #e65b50;
+  outline: none;
+}
+
+.viewCartButton:focus {
+  box-shadow: 0 0 0 2px rgba(255, 111, 97, 0.3);
+}
+
+@media (max-width: 480px) {
+  .modal {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .tab {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .input {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .submitButton {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .socialButton {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .successNotification {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}

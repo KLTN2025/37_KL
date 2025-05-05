@@ -1,0 +1,315 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: absolute;
+  top: 20px; /* tùy chỉnh theo chiều cao Header */
+  left: 200px; /* tùy chỉnh theo chiều rộng Sidebar */
+  right: 0;
+  bottom: 0;
+  overflow-y: auto; /* Cho phép cuộn dọc */
+  padding: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.mainContent {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  align-items: flex-start;
+}
+
+/* FORM BÊN TRÁI */
+.formWrapper {
+  flex: 2px;
+  width: 320px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-left: 5px;
+}
+
+.formWrapper h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.formWrapper input,
+.formWrapper select {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-left: -13px;
+}
+
+.formActions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.submitBtn,
+.cancelBtn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.submitBtn {
+  background-color: #1677ff;
+  color: white;
+}
+
+.cancelBtn {
+  background-color: #f44336;
+  color: white;
+}
+
+/* BẢNG BÊN PHẢI */
+.tableWrapper {
+  flex: 2.5;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-size: 14px;
+}
+
+.actionBar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  gap: 12px;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.searchBtn,
+.addBtn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.searchBtn {
+  background-color: #ccc;
+  color: black;
+}
+
+.addBtn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f1f1f1;
+  font-weight: 600;
+}
+
+.actionButtons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  flex-wrap: nowrap; 
+}
+
+.editBtn,
+.deleteBtn {
+  padding: 8px 12px;
+  font-size: 11px;
+  white-space: nowrap;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-align: left;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.editBtn {
+  background-color: #2196f3;
+}
+
+.deleteBtn {
+  background-color: #f44336;
+}
+
+.deleteBtn:hover {
+  background-color: #e53935;
+}
+
+/* OVERLAY FORM */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.overlayForm {
+  background-color: white;
+  padding: 24px;
+  border-radius: 12px;
+  width: 400px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.overlayForm h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.overlayForm input,
+.overlayForm select {
+  width: 100%;
+  margin-bottom: 14px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modalContent {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modalForm input,
+.modalForm select {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.outOfStock {
+  color: red;
+  font-weight: bold;
+}
+
+.inStock {
+  color: green;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.historyBtn {
+  background: none;
+  border: none;
+  color: #555;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.historyBtn:hover {
+  color: #007bff;
+}
+
+.historySection {
+  margin-top: 24px;
+  background: #f9f9f9;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.historySection h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  color: #333;
+}
+
+.scrollWrapper {
+  max-height: 300px; /* Có thể chỉnh tuỳ ý */
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 8px;
+}
+
+.scrollWrapper::-webkit-scrollbar {
+  width: 15px;
+}
+
+.scrollWrapper::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 3px;
+}
+

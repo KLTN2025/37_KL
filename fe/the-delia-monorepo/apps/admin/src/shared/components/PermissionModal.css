@@ -1,0 +1,145 @@
+.permission-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.permission-modal {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 900px; /* 👈 Thu nhỏ modal lại */
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.permission-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.permission-table th,
+.permission-table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: left;
+  vertical-align: top;
+}
+
+.permission-table th[colspan="2"] {
+  text-align: center;
+}
+
+.permission-table td:nth-child(3),
+.permission-table td:nth-child(4) {
+  width: 25%; /* 👈 Rộng rãi hơn cho cột ADMIN & NHÂN VIÊN */
+}
+
+.grant-btn {
+  background: #A67C2D;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.remove-btn {
+  background: #4C84E0;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cancel-btn {
+  background: #2E1A46;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.save-btn {
+  background: #4C84E0;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.granted-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.granted-badge.admin {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.granted-badge.staff {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.granted-badge .remove-btn {
+  background-color: transparent;
+  color: #d32f2f;
+  border: none;
+  cursor: pointer;
+  margin-left: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.granted-badge .remove-btn:hover {
+  text-decoration: underline;
+}
+
+
+.permission-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.grant-all-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.grant-all-btn:hover {
+  background-color: #1565c0;
+}
+

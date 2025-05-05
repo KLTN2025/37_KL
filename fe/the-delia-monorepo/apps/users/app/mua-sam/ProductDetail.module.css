@@ -1,0 +1,825 @@
+/* app/mua-sam/ProductDetail.module.css */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  max-width: 100%;
+}
+
+.main {
+  padding: 20px 0;
+}
+
+/* Style cho thanh menu chính (main navigation) */
+.headerWrapper {
+  width: 100%;
+  background-color: #fff;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+}
+
+.searchBar {
+  flex: 1;
+}
+
+.logo {
+  flex: 1;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.userActions {
+  flex: 1;
+  text-align: right;
+}
+
+.mainNav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.mainNav a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  transition: color 0.3s;
+}
+
+.mainNav a:hover {
+  color: #ff6f61;
+}
+
+.mainNav a.active {
+  color: #ff6f61;
+}
+
+/* Style cho tiêu đề danh mục (NAM, NỮ,...) */
+.sectionHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  position: relative;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.viewMoreLink {
+  font-size: 1rem;
+  color: #666;
+  text-decoration: none;
+  position: absolute;
+  right: 300px;
+}
+
+.viewMoreLink:hover {
+  text-decoration: underline;
+}
+
+.categorySection {
+  margin-bottom: 40px;
+}
+
+.productList {
+  display: grid; /* Sử dụng grid thay vì flex */
+  grid-template-columns: repeat(4, 250px); /* 4 thẻ trên mỗi hàng, mỗi thẻ 250px */
+  gap: 20px;
+  justify-content: center; /* Căn giữa toàn bộ grid */
+  padding: 0 20px;
+}
+
+/* Style cho ô sản phẩm */
+.productCard {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  transition: transform 0.2s;
+  background-color: #fff;
+  width: 250px;
+  min-height: 400px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.productImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Thêm placeholder nếu không có hình ảnh */
+.imageWrapper:empty::after {
+  content: "No Image Available";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.productName {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+  margin-top: 10px;
+  line-height: 1.2;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.productPrice {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #ff0000;
+  margin-top: 5px;
+}
+
+/* Thêm style cho buttonGroup */
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding-bottom: 0.5rem;
+}
+
+/* Đảm bảo style cho nút Thêm vào giỏ hàng và Yêu thích */
+.cartIconWrapper, .heartIconWrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  background: white;
+  transition: background 0.3s ease;
+}
+
+.cartIconWrapper:hover, .heartIconWrapper:hover {
+  background: #f28c38;
+}
+
+.cartIconWrapper:hover svg, .heartIconWrapper:hover span {
+  color: white;
+}
+
+.searchInfo {
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.noProducts {
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #000;
+  text-align: center;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footerLogo {
+  text-align: center;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.footerColumn {
+  text-align: left;
+}
+
+.footerColumn h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footerColumn ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerColumn ul li {
+  margin-bottom: 5px;
+}
+
+.footerColumn ul li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footerColumn ul li a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.footerSocial {
+  margin-bottom: 20px;
+}
+
+.footerSocial h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footerBottom {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .productList {
+    grid-template-columns: repeat(3, 250px); /* 3 thẻ trên mỗi hàng */
+  }
+}
+
+@media (max-width: 768px) {
+  .productList {
+    grid-template-columns: repeat(2, 250px); /* 2 thẻ trên mỗi hàng */
+  }
+
+  .productCard {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .viewMoreLink {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .productList {
+    padding: 0 10px;
+  }
+
+  .mainNav {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 5px 10px;
+  }
+
+  .mainNav a {
+    font-size: 0.9rem;
+    padding: 5px;
+  }
+
+  .footer {
+    padding: 10px;
+  }
+
+  .footerContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerColumn {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .productList {
+    grid-template-columns: repeat(1, 250px); /* 1 thẻ trên mỗi hàng */
+  }
+}
+
+/* Style cho các biểu tượng mạng xã hội cố định */
+.socialIconsFixed {
+  position: fixed;
+  bottom: 10px; 
+  right: 10px; 
+  z-index: 1000; 
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; 
+}
+
+.socialIconsFixed .socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; 
+  height: 50px;
+  border-radius: 50%; 
+  border: 2px solid rgba(255, 255, 255, 0.8); 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.socialIconsFixed .socialIcon:hover {
+  transform: translateY(-3px); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+}
+
+.socialIconsFixed .whatsapp {
+  background-color: #25d366; 
+}
+
+.socialIconsFixed .instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); 
+}
+
+.socialIconsFixed .contact {
+  background-color: #ff8c00; 
+}
+
+.socialIconsFixed .socialIcon i {
+  font-size: 1.6rem; 
+  color: #fff; 
+}
+
+@media (max-width: 768px) {
+  .socialIconsFixed {
+    bottom: 5px; 
+    right: 5px;
+  }
+
+  .socialIconsFixed .socialIcon {
+    width: 40px; 
+    height: 40px;
+  }
+
+  .socialIconsFixed .socialIcon i {
+    font-size: 1.3rem; 
+  }
+}
+
+@media (max-width: 480px) {
+  .socialIconsFixed {
+    bottom: 5px;
+    right: 5px;
+  }
+
+  .socialIconsFixed .socialIcon {
+    width: 36px; 
+    height: 36px;
+  }
+
+  .socialIconsFixed .socialIcon i {
+    font-size: 1.1rem; 
+  }
+}
+
+/* app/mua-sam/ProductDetail.module.css */
+
+/* ... (giữ nguyên các style hiện có) ... */
+
+/* Style cho phần người dùng trong header */
+.userSection {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+/* Style cho nút avatar */
+.avatarButton {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+/* Style cho hình ảnh avatar */
+.avatarImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff; /* Viền trắng quanh avatar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Thêm bóng nhẹ */
+}
+
+/* Style cho dropdown menu */
+.dropdown-menu {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Bóng nhẹ cho dropdown */
+}
+
+/* Style cho các mục trong dropdown */
+.dropdown-item {
+  font-size: 0.9rem;
+  color: #333;
+  padding: 8px 20px;
+  transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #ff6f61; /* Màu khi hover, khớp với giao diện trang */
+}
+
+/* Style cho tiêu đề trong dropdown (Hi, CongVo Manh) */
+.dropdown-header {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  padding: 8px 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .userSection {
+    top: 10px;
+    left: 10px;
+  }
+
+  .avatarImage {
+    width: 32px;
+    height: 32px;
+  }
+
+  .dropdown-item {
+    font-size: 0.85rem;
+    padding: 6px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .userSection {
+    top: 5px;
+    left: 5px;
+  }
+
+  .avatarImage {
+    width: 28px;
+    height: 28px;
+  }
+
+  .dropdown-item {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+}
+
+/* app/mua-sam/ProductDetail.module.css */
+
+/* ... (giữ nguyên các style hiện có) ... */
+
+/* Style cho header */
+.header {
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+}
+
+/* Style cho top bar */
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+}
+
+/* Style cho logo */
+.logo {
+  flex: 1;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logoHighlight {
+  color: #ff6f61; /* Màu cam cho phần "COUTURE" */
+}
+
+.leafIcon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("/leaf-icon.png") no-repeat center;
+  background-size: contain;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+/* Style cho actions (đăng nhập, giỏ hàng, ngôn ngữ) */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.actionButton {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #333;
+  cursor: pointer;
+  padding: 5px;
+  transition: color 0.3s;
+}
+
+.actionButton:hover {
+  color: #ff6f61;
+}
+
+/* Style cho giỏ hàng */
+.cartWrapper {
+  position: relative;
+}
+
+.cartBadge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ff0000;
+  color: #fff;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+}
+
+/* Style cho chuyển ngôn ngữ */
+.languageToggle {
+  display: flex;
+  align-items: center;
+}
+
+.languageOption {
+  font-size: 0.9rem;
+  color: #666;
+  text-decoration: none;
+  padding: 5px;
+  transition: color 0.3s;
+}
+
+.languageOption:hover,
+.activeLanguage {
+  color: #ff6f61;
+}
+
+/* Style cho nav */
+.nav {
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.navWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navLink {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  transition: color 0.3s;
+}
+
+.navLink:hover,
+.activeLink {
+  color: #ff6f61;
+}
+
+/* Style cho dropdown của mục "MUA SẮM" */
+.navItem {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  z-index: 1000;
+  padding: 20px;
+  min-width: 600px;
+}
+
+.dropdownContent {
+  display: flex;
+  gap: 20px;
+}
+
+.categoryColumn {
+  flex: 1;
+}
+
+.categoryTitle {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.categoryLink {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  text-decoration: none;
+  padding: 5px 0;
+  transition: color 0.3s;
+}
+
+.categoryLink:hover {
+  color: #ff6f61;
+}
+
+/* Style cho avatar và dropdown người dùng */
+.avatarButton {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.avatarImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff; /* Viền trắng quanh avatar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Thêm bóng nhẹ */
+}
+
+/* Style cho dropdown menu */
+.dropdown-menu {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Bóng nhẹ cho dropdown */
+}
+
+/* Style cho các mục trong dropdown */
+.dropdown-item {
+  font-size: 0.9rem;
+  color: #333;
+  padding: 8px 20px;
+  transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #ff6f61; /* Màu khi hover, khớp với giao diện trang */
+}
+
+/* Style cho tiêu đề trong dropdown (Hi, CongVo Manh) */
+.dropdown-header {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  padding: 8px 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .topBar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+
+  .navWrapper {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 5px 10px;
+  }
+
+  .navLink {
+    font-size: 0.9rem;
+    padding: 5px;
+  }
+
+  .dropdown {
+    min-width: 100%;
+    left: 0;
+    transform: none;
+  }
+
+  .dropdownContent {
+    flex-direction: column;
+  }
+
+  .avatarImage {
+    width: 32px;
+    height: 32px;
+  }
+
+  .dropdown-item {
+    font-size: 0.85rem;
+    padding: 6px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1rem;
+  }
+
+  .navLink {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+
+  .actionButton {
+    font-size: 1rem;
+  }
+
+  .avatarImage {
+    width: 28px;
+    height: 28px;
+  }
+
+  .dropdown-item {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+}

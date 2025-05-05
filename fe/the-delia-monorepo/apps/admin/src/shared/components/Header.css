@@ -1,0 +1,55 @@
+.header {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 4px 10px;
+  background-color: transparent;
+  z-index: 1000;
+
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-info-button {
+  display: flex;
+  align-items: center;
+  background-color: #666;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+
+.user-icon {
+  margin-right: 4px;
+  font-size: 14px;
+}
+
+.user-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 11px;
+  line-height: 1.1;
+}
+
+.logout-button {
+  display: flex;
+  background-color:rgb(227, 144, 0);
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 12px;
+}

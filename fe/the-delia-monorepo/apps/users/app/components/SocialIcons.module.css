@@ -1,0 +1,37 @@
+/* app/components/SocialIcons.module.css */
+.floatingIcons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .floatingIcon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .floatingIcons a:nth-child(1),
+  .floatingIcons a:nth-child(1):hover {
+    background: #25D366;
+  }
+  
+  .floatingIcons a:nth-child(2),
+  .floatingIcons a:nth-child(2):hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  }
+  
+  .floatingIcons a:nth-child(3),
+  .floatingIcons a:nth-child(3):hover {
+    background: #FFA500;
+  }

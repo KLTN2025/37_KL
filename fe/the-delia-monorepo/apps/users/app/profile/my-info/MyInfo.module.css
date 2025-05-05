@@ -1,0 +1,294 @@
+/* app/profile/my-info/MyInfo.module.css */
+.mainContent {
+  flex: 1;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.pageTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d2d2d;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.formContainer {
+  max-width: 600px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.inputGroup label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #2d2d2d;
+}
+
+.required {
+  color: #ff6f61;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.userIcon {
+  position: absolute;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background-color: #ff6f61;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #2d2d2d;
+  background-color: #fff;
+}
+
+.input:disabled {
+  background-color: #f0f0f0;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+.input[type="select"],
+.input select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>') no-repeat right 0.75rem center;
+  background-size: 12px;
+}
+
+.checkmark {
+  position: absolute;
+  right: 0.75rem;
+  color: #28a745;
+  font-size: 0.9rem;
+}
+
+.nameRow {
+  display: flex;
+  gap: 1rem;
+}
+
+.nameRow .inputGroup {
+  flex: 1;
+}
+
+.inputRow {
+  display: flex;
+  gap: 1rem;
+}
+
+.inputRow .inputGroup {
+  flex: 1;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  justify-content: flex-end;
+}
+
+.cancelButton,
+.saveButton {
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.cancelButton {
+  background-color: #e0e0e0;
+  color: #666;
+  border: none;
+}
+
+.cancelButton:hover {
+  background-color: #d0d0d0;
+}
+
+.saveButton {
+  background-color: #2d2d2d;
+  color: #fff;
+  border: none;
+}
+
+.saveButton:hover {
+  background-color: #1a1a1a;
+}
+
+.addressSection {
+  margin-top: 2rem;
+}
+
+.addressHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addressHeader h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d2d2d;
+  text-transform: uppercase;
+}
+
+.addAddressButton {
+  background-color: #ff6f61;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.addAddressButton:hover {
+  background-color: #e65b50;
+}
+
+.notLoggedIn {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Modal styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.modalTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d2d2d;
+  margin-bottom: 1rem;
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mainContent {
+    padding: 1.5rem;
+  }
+
+  .pageTitle {
+    font-size: 1.3rem;
+  }
+
+  .form {
+    gap: 0.75rem;
+  }
+
+  .inputGroup label {
+    font-size: 0.85rem;
+  }
+
+  .input {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+    padding-left: 2.5rem;
+  }
+
+  .userIcon {
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+  }
+
+  .nameRow,
+  .inputRow {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .cancelButton,
+  .saveButton {
+    padding: 0.3rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .modal {
+    width: 90%;
+    padding: 1rem;
+  }
+}

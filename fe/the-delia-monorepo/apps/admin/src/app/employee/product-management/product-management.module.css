@@ -1,0 +1,459 @@
+.container {
+  display: flex;
+  height: 100vh;
+  background-color: #f9fafb;
+  justify-content: space-between;
+}
+
+.content {
+  flex: 1;
+  padding: 20px 40px;
+  background-color: #fefefe;
+  position: absolute;
+  top: 20px; /* tùy chỉnh theo chiều cao Header */
+  left: 230px; /* tùy chỉnh theo chiều rộng Sidebar */
+  right: 0;
+  bottom: 0;
+  overflow-y: auto; /* Cho phép cuộn dọc */
+  padding: 20px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+.form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form input,
+.form select {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+.formActions {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.submitBtn {
+  background-color: rgb(0, 222, 52);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.submitBtn:hover {
+  background-color: rgb(8, 71, 3);
+}
+
+.cancelBtn {
+  background-color: rgb(105, 0, 0);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cancelBtn:hover {
+  background-color: rgb(173, 128, 128);
+}
+
+.tableWrapper {
+  margin-top: 3px;
+}
+
+.searchInput {
+  width: 300px;
+  padding: 8px 10px;
+  margin-bottom: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  padding: 12px 10px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+.table th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+  color: #374151;
+}
+
+.productImage {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 24, 39, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modalContent {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.modalContent h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+.modalContent input,
+.modalContent select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.mainContent {
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+  align-items: stretch;
+}
+
+.formWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; /* Đảm bảo form có chiều cao tối thiểu giống bảng */
+}
+
+
+.tableWrapper {
+  flex: 1;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid rgb(122, 122, 122);
+  display: flex;
+  flex-direction: column;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table th {
+  background-color: rgb(227, 227, 227);
+  font-weight: 600;
+}
+
+.table td:last-child {
+  text-align: center;
+}
+
+.searchAndAddContainer {
+  display: flex;
+  justify-content: flex-start; /* Chỉ căn giữa cho phần tìm kiếm */
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.searchContainer {
+  flex: 1;
+}
+
+.searchInput {
+  width: 300px;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.editBtn,
+.deleteBtn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.editBtn {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.editBtn:hover {
+  background-color: #059669;
+}
+
+.deleteBtn {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.deleteBtn:hover {
+  background-color: #dc2626;
+}
+
+.editBtn {
+  background-color: rgb(73, 115, 182);
+  color: white;
+}
+
+.deleteBtn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.mainSection {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  align-items: flex-start;
+}
+
+/* Giới hạn chiều rộng cho form */
+.form {
+  flex: 1;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 0px;
+  margin-left: -20px;
+  margin-right: 5px;
+  
+}
+
+/* Cho bảng danh sách rộng hơn */
+.tableWrapper {
+  flex: 1;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-left: -15px;
+}
+
+.select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+
+.addCategoryBtn {
+  background-color: #1d4ed8; /* Màu xanh dương */
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.addCategoryBtn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.addCategoryBtn:hover {
+  background-color: rgb(116, 160, 255);
+}
+
+.cancelCategoryBtn {
+  background-color: #ef4444;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancelCategoryBtn:hover {
+  background-color: rgb(222, 32, 32);
+}
+
+.cancelCategoryBtn:disabled {
+  background-color: #fca5a5;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* Style cho danh sách danh mục */
+.categoryList {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 98%;
+  overflow-x: auto;
+  margin-left: -20px;
+}
+
+.categoryList h4 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+}
+
+.categoryList table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.categoryList th,
+.categoryList td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  word-wrap: break-word;
+}
+
+.categoryList th {
+  background-color: #f2f2f2;
+  font-weight: 600;
+  color: #333;
+}
+
+.deleteCategoryBtn {
+  background-color: #f44336; /* Màu đỏ */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.deleteCategoryBtn:hover {
+  background-color: #d32f2f; /* Màu đỏ đậm khi hover */
+}
+
+.viewMore {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.filters select {
+  padding: 6px 10px;
+  border-radius: 4px;
+}

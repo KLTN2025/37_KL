@@ -1,0 +1,85 @@
+/* app/components/Sidebar.module.css */
+.sidebar {
+  width: 280px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.greeting {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #2d2d2d;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #666;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.navItem:hover {
+  background-color: #f5f5f5;
+  color: #ff6f61;
+}
+
+.navItem.active {
+  background-color: #666;
+  color: #fff;
+}
+
+.navItem i {
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+  }
+
+  .greeting {
+    font-size: 1.1rem;
+  }
+
+  .navItem {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .greeting {
+    font-size: 1rem;
+  }
+
+  .navItem {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.75rem;
+  }
+}

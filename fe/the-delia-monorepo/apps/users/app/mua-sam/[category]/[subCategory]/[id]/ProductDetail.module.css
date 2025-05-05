@@ -1,0 +1,602 @@
+/* app/mua-sam/[category]/[subCategory]/[id]/ProductDetail.module.css */
+.main {
+  flex: 1;
+  padding: 0.5rem; /* Giảm padding tổng thể */
+  width: 100%; /* Toàn màn hình */
+  background-color: #fff;
+  display: flex; /* Add flex to center the content */
+  justify-content: center; /* Center the productDetail container */
+  flex-direction: column; /* Ensure sections stack vertically */
+  align-items: center; /* Center children horizontally */
+}
+
+.breadcrumb {
+  font-size: 0.85rem;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.3rem;
+  width: 100%; /* Ensure breadcrumb takes full width */
+  max-width: 700px; /* Match updated productDetail width */
+}
+
+.breadcrumb a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: #ff6f61;
+}
+
+.breadcrumb span {
+  color: #2b2b2b;
+}
+
+.productDetail {
+  display: flex;
+  gap: 1rem; /* Increase gap slightly for better spacing, but still close */
+  align-items: flex-start;
+  justify-content: center; /* Căn giữa */
+  max-width: 700px; /* Increase from 650px to 700px to accommodate larger productInfo */
+  margin-bottom: 2rem; /* Add spacing below productDetail */
+}
+
+.imageGallery {
+  flex: 0 0 auto; /* Prevent growing, use natural width */
+  display: flex;
+  gap: 0.3rem;
+}
+
+.thumbnailList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.thumbnail {
+  width: 70px; /* Increase from 60px to 70px */
+  height: 105px; /* Increase from 90px to 105px */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+
+.thumbnail:hover {
+  border-color: #ff6f61;
+}
+
+.thumbnailImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.selectedThumbnail {
+  border: 2px solid #ff6f61;
+}
+
+.mainImage {
+  flex: 0 0 auto; /* Prevent growing */
+  max-width: 350px; /* Increase from 300px to 350px to make the image larger */
+}
+
+.productImage {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.productInfo {
+  flex: 0 0 auto; /* Prevent growing, use natural width */
+  padding: 0;
+  max-width: 320px; /* Increase from 230px to 320px to match screenshot */
+}
+
+.productHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem; /* Increase spacing below product header */
+}
+
+.productName {
+  font-size: 2rem; /* Already matches screenshot */
+  font-weight: 700;
+  color: #2b2b2b;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.favoriteButton {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.7rem;
+  color: #2b2b2b;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.favoriteButton:hover i {
+  color: #ff6f61;
+}
+
+.favoriteButton span {
+  font-weight: 500;
+}
+
+.price {
+  font-size: 1.6rem; /* Already matches screenshot */
+  color: #ff6f61;
+  margin-bottom: 0.5rem; /* Increase spacing below price */
+  font-weight: 700; /* Đậm hơn */
+  text-align: left;
+}
+
+.colors {
+  margin-bottom: 0.5rem; /* Increase spacing below colors */
+  text-align: left;
+}
+
+.colors label {
+  display: block;
+  font-size: 1rem; /* Already matches screenshot */
+  font-weight: 700; /* Đậm hơn */
+  margin-bottom: 0.2rem; /* Slightly increase spacing below label */
+  color: #2b2b2b;
+}
+
+.colorWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.colorOption {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.colorOption:hover {
+  transform: scale(1.1);
+}
+
+.sizes {
+  margin-bottom: 0.5rem; /* Increase spacing below sizes */
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem; /* Slightly increase gap between label and size options */
+  text-align: left;
+}
+
+.sizes label {
+  font-size: 1rem; /* Already matches screenshot */
+  font-weight: 700; /* Đậm hơn */
+  color: #000;
+}
+
+.sizeWrapper {
+  display: fixed;
+  align-items: center;
+  gap: 0.3rem; /* Slightly increase gap between size options */
+  flex-wrap: wrap;
+}
+
+.sizeOption {
+  padding: 0.3rem 0.6rem; /* Increase padding to make buttons larger */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.9rem; /* Already matches screenshot */
+  font-weight: 500;
+  color: #000;
+  transition: all 0.3s ease;
+  min-width: 40px; /* Increase from 30px to 40px to make buttons wider */
+  text-align: center;
+}
+
+.sizeOption:hover {
+  border-color: #ff6f61;
+}
+
+.selectedSize {
+  background: #000;
+  color: white;
+  border-color: #000;
+}
+
+.sizeGuide {
+  font-size: 0.65rem;
+  color: #000000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  margin-top: 0.2rem; 
+  transition: color 0.3s ease;
+}
+
+.sizeGuide:hover {
+  color: #ff6f61;
+}
+
+.madeToMeasure {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0;
+  margin-bottom: 0.7rem;
+  background: #f5f5f5;
+  border: 2px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1rem;
+  color: #000 !important;
+  text-align: center;
+  letter-spacing: 1px;
+  transition: background 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.madeToMeasure:hover {
+  background: #eaeaea;
+  border-color: #ff6f61;
+  color: #ff6f61;
+}
+
+.quantity {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem; /* Slightly increase gap between label and quantity control */
+  margin-bottom: 0.5rem; /* Increase spacing below quantity */
+  text-align: left;
+}
+
+.quantity label {
+  font-size: 1rem; /* Already matches screenshot */
+  font-weight: 700; /* Đậm hơn */
+  color: #000;
+}
+
+.quantityControl {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 30px; /* Increase height to make control larger */
+  width: fit-content;
+}
+
+.quantityControl button {
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem; /* Slightly increase font size */
+  padding: 0 0.6rem; /* Increase padding for larger buttons */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #000;
+  transition: background 0.3s ease;
+}
+
+.quantityControl button:hover {
+  background: #f5f5f5;
+}
+
+.quantityControl span {
+  font-size: 0.8rem; /* Slightly increase font size */
+  padding: 0 0.8rem; /* Increase padding for larger display */
+  font-weight: 500;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  min-width: 30px; /* Increase width for larger display */
+  text-align: center;
+  height: 100%;
+  line-height: 28px; /* Adjust line height to match new height */
+  color: #000;
+}
+
+.addToCart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  width: 100%;
+  padding: 0.7rem; /* Increase padding to make button taller */
+  background: #000; /* Đổi nền thành đen */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1rem; /* Already matches screenshot */
+  transition: background 0.3s ease;
+}
+
+.addToCart:hover {
+  background: #000000; /* Đổi màu hover */
+}
+
+.description {
+  margin-top: 1rem; /* Add spacing above description */
+  margin-bottom: 1rem; /* Add spacing below description */
+  padding: 0.5rem 0;
+  max-width: 700px; /* Match updated productDetail width for consistency */
+  width: 100%; /* Ensure it takes full available width up to max-width */
+}
+
+.description h3 {
+  font-size: 1.4rem; /* Already matches screenshot */
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: #000000;
+}
+
+.description p {
+  color: #000000;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.relatedProducts {
+  margin-top: 0; /* No extra margin-top since description provides spacing */
+  padding: 0.5rem 0;
+  max-width: 700px; /* Match updated productDetail width for consistency */
+  width: 100%; /* Ensure it takes full available width up to max-width */
+}
+
+.relatedProducts h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #000000;
+}
+
+.relatedProductsList {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.relatedProduct {
+  flex: 0 0 180px;
+  text-align: center;
+  position: relative;
+}
+
+.relatedProductImageWrapper {
+  position: relative;
+}
+
+.relatedProductImage {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+}
+
+.relatedProductImageWrapper:hover .relatedProductImage {
+  opacity: 0.8;
+}
+
+.relatedProductName {
+  font-size: 0.85rem;
+  color: #000000;
+  margin: 0.3rem 0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.relatedProductPrice {
+  font-size: 0.9rem;
+  color: #ff6f61;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.relatedProductActions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0.3rem 0;
+}
+
+.relatedProductCart {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.relatedProductCart:hover {
+  background: #f5f5f5;
+}
+
+.relatedProductCart i {
+  font-size: 1rem;
+  color: #2b2b2b;
+}
+
+.relatedProductFavorite {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  color: #2b2b2b;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.relatedProductFavorite span {
+  font-weight: 500;
+}
+
+.footer {
+  background: #2b2b2b;
+  color: white;
+  padding: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footerSection {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footerSection h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #ff6f61;
+  text-transform: uppercase;
+}
+
+.footerSection p {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.footerSection a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footerSection a:hover {
+  color: #ff6f61;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.socialIcons a {
+  font-size: 1.5rem;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.socialIcons a:hover {
+  color: #ff6f61;
+}
+
+.footerBottom {
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #444;
+  padding-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .breadcrumb {
+    margin-bottom: 0.3rem;
+    max-width: 100%; /* Adjust for mobile */
+  }
+
+  .productDetail {
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 100%; /* Adjust for mobile */
+  }
+
+  .imageGallery {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .thumbnailList {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 0.3rem;
+  }
+
+  .thumbnail {
+    flex: 0 0 auto;
+  }
+
+  .mainImage {
+    max-width: 100%;
+  }
+
+  .productImage {
+    width: 100%;
+  }
+
+  .productInfo {
+    padding: 0.5rem;
+    max-width: 100%;
+  }
+
+  .description {
+    margin-left: 0;
+    max-width: 100%; /* Adjust for mobile */
+  }
+
+  .relatedProducts {
+    margin-left: 0;
+    max-width: 100%; /* Adjust for mobile */
+  }
+
+  .relatedProductsList {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footerSection {
+    margin-bottom: 1rem;
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+}

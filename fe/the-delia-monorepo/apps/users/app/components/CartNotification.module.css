@@ -1,0 +1,21 @@
+/* components/CartNotification.module.css */
+.notification {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #28a745;
+    padding: 10px;
+  }
+  
+  .viewNowButton {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .viewNowButton:hover {
+    background-color: #0056b3;
+  }

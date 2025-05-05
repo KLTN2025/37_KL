@@ -1,0 +1,57 @@
+.sidebar {
+  position: fixed;
+  width: 180px;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: rgb(135, 255, 255);
+  padding: 17px;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: black;
+}
+
+.logo {
+  color: green;
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  font-family: 'serif';
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex-grow: 1;
+}
+
+.menu-item {
+  background: white;
+  border: none;
+  border-radius: 14px;
+  padding: 17px 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14.5px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  color: black;
+}
+
+.menu-item:hover {
+  background-color: rgb(139, 4, 154); /* Tạo hiệu ứng hover đẹp hơn */
+  color: white;
+}
+
+.menu-item.active {
+  background-color: #e8dcff;
+  color: black;
+}
+
+.menu-item:disabled {
+  cursor: not-allowed;
+  background-color: lightgray; /* Tạo màu nền khi disabled */
+}
